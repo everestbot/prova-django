@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+
+{% load static %}
+
+<html lang="pt-BR">
+    {% include "blog/header.html" %}
+    <body>
+    {% include "blog/navbar.html" %}
+        <div class="page-header">
+            <a href="{% url 'post_new' %}" class="top-menu"><span class="close">NOVO CADASTRO</span></a>
+            <h1><a href="/">LISTAGEM</a></h1>
+        </div>
+        <div class="content container">
+            <div class="close">
+                <div class="col-md-16">
+                    {% block content %}
+                    {% endblock %}
+                </div>
+            </div>
+        </div>
+    {% include "blog/footer.html" %}
+    </body>
+</html>
